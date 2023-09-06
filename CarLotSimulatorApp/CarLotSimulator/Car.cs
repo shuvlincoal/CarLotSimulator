@@ -27,6 +27,7 @@ namespace CarLotSimulator
             //this **ESTABLISHES the order** parameters are passed in
         {
             //This FOLLOWS the order
+            //Pascal      camel Casing
             Year        = taco;
             Make        = make;
             Model       = model;
@@ -39,6 +40,7 @@ namespace CarLotSimulator
 
         //This construct of "Property" is required in order to
         //default AND custom Constructor
+        //            Pascal Casing
         public int    Year        { get; set; }  //property
         public string Make        { get; set; }  //property
         public string Model       { get; set; }  //property
