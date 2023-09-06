@@ -10,12 +10,13 @@ namespace CarLotSimulator
     internal class Car
     {
 
-        //public int    Year;          //fields/attributes
-        //public string Make;          //you CAN NOT have same 
+        //public int    Year;           //fields/attributes
+        //public string Make;           //you CAN NOT have same 
         //public string Model;          //name fields here that
         //public string EngineNoise;    //used in propertys
         //public string HonkNoise;
         //public string IsDriveable;
+        public int Price = 1200;
 
         
 
@@ -23,7 +24,7 @@ namespace CarLotSimulator
         {
         }
         public Car(int taco, string make, string model, string engineNoise, string honkNoise, string isDriveable) //custom constructor
-            //this ESTABLISHES the order parameters are passed in
+            //this **ESTABLISHES the order** parameters are passed in
         {
             //This FOLLOWS the order
             Year        = taco;
@@ -32,16 +33,17 @@ namespace CarLotSimulator
             EngineNoise = engineNoise;
             HonkNoise   = honkNoise;
             IsDriveable = isDriveable;
+            //Price       = price;
 
         }
 
         //This construct of "Property" is required in order to
         //default AND custom Constructor
-        public int Year { get; set; }  //property
-        public string Make { get; set; }  //property
-        public string Model { get; set; }  //property
+        public int Year           { get; set; }  //property
+        public string Make        { get; set; }  //property
+        public string Model       { get; set; }  //property
         public string EngineNoise { get; set; }  //property
-        public string HonkNoise { get; set; }  //property
+        public string HonkNoise   { get; set; }  //property
         public string IsDriveable { get; set; }  //property
 
 

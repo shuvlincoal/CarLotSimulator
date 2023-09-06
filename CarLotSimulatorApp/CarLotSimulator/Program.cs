@@ -18,22 +18,26 @@ namespace CarLotSimulator
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
+            //instantiate, create a "Car" object
             Car car1 = new Car();
-            //dot notation
-            car1.Year = 2023;
-            car1.Make = "Nissan";
-            car1.Model = "Rogue";
+
+            //use dot notation to **SET** the object propertys
+            car1.Year        = 2023;
+            car1.Make        = "Nissan";
+            car1.Model       = "Rogue";
             car1.EngineNoise = "Vroom";
-            car1.HonkNoise = "Beep, beep";
+            car1.HonkNoise   = "Beep, beep";
             car1.IsDriveable = "yes";
 
             //*************BONUS*************//
-
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
-            //Object initializer syntax
+
+            //instantiate, create a "Car" object
+            //Object initializer syntax to **SET** the object propertys
             Car car2 = new Car() { Year = 2023, Make = "Nissan", Model = "Rogue", EngineNoise = "Vroom Vroom", HonkNoise = "Beep", IsDriveable = "Y" }; //order does not matter
 
-            //Custom Constructor
+            //instantiate, create a "Car" object
+            //Custom Constructor to **SET** the object propertys
             Car car3 = new Car(2023, "Nissan", "Rogue", "Vroom Vroom", "Beep", "yes"); //order DOES matter
 
 
@@ -47,10 +51,15 @@ namespace CarLotSimulator
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
 
+            //Display Cars
             CarLot.DisplayCars();
+
+            //Add a car to inventory
             Console.WriteLine("Type the Make of the Car");
             string tmpStr = Console.ReadLine();
             CarLot.AddCar(tmpStr);
+            
+            //Display cars again
             CarLot.DisplayCars();
 
         }//Main method
