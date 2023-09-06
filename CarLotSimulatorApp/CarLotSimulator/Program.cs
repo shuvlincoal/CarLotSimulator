@@ -5,6 +5,13 @@ namespace CarLotSimulator
 {
     class Program
     {
+
+        //Fields
+
+        //Property's
+        public static  List<Car> ListOfCars { get; set; } = new List<Car>();
+
+
         static void Main(string[] args)
         {
             //TODO
@@ -36,11 +43,12 @@ namespace CarLotSimulator
             //instantiate, create a "Car" object <---<<<
             //Object initializer syntax to **SET** the object propertys
             //Uses the DEFAULT CONSTRUCTOR
-            Car car2 = new Car() { Year = 2023, Make = "Nissan", Model = "Rogue", EngineNoise = "Vroom Vroom", HonkNoise = "Beep", IsDriveable = "Y" }; //order does not matter
+            //ADVANTAGE: Don't HAVE to supply ALL the parameters
+            Car car2 = new Car() { Year = 1960, Make = "Ford", Model = "Cobra", EngineNoise = "Vroom Vroom", HonkNoise = "Beep", IsDriveable = "Y" }; //order does not matter
 
             //instantiate, create a "Car" object <---<<<
             //Uses Custom Constructor to **SET** the object propertys
-            Car car3 = new Car(2023, "Nissan", "Rogue", "Vroom Vroom", "Beep", "Y" ); //order does not matter
+            Car car3 = new Car(1955, "Chevrolet", "Covette", "Vroom Vroom", "Beep", "Y" ); //order does not matter
 
 
 
@@ -57,7 +65,17 @@ namespace CarLotSimulator
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
 
-            //Display Cars
+            //Display Cars Variation 1 
+            Program.ListOfCars.Add(car1);
+            Program.ListOfCars.Add(car2);
+            Program.ListOfCars.Add(car3);
+
+            foreach (Car car in Program.ListOfCars)
+            {
+                Console.WriteLine($"Make: {car.Make}, Year:{car.Year}, Model:{car.Model}");
+            }
+
+            //Display Cars Variation 2
             CarLot.DisplayCars();
             Console.WriteLine("Press Return To Concontinue> ");
             tmpStr = Console.ReadLine();

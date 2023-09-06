@@ -8,15 +8,18 @@ using System.Threading.Tasks;
 namespace CarLotSimulator
 {
     internal class Car
-    {
-        //              Pascal
-        //public int    Year;           //fields/attributes
-        //public string Make;           //you CAN NOT have same 
-        //public string Model;          //name fields here that
-        //public string EngineNoise;    //used in propertys
-        //public string HonkNoise;
-        //public string IsDriveable;
-        public int Price = 1200;
+    {   //Fields are created directly inside the class
+        //Fields are accessible from anywhere in our outside the class (if public)
+        //If a field is changed from anywhere - its changed everywhere its used
+        //Fields use camel casing
+        //              Camel Casing
+        //public int    year;           //fields/attributes
+        //public string make;           //you CAN NOT have same 
+        //public string model;          //name fields here that
+        //public string engineNoise;    //used in propertys
+        //public string honkNoise;
+        //public string isDriveable;
+        public int price = 1200;
 
         
 
