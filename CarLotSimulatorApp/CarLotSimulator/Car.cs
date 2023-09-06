@@ -39,7 +39,7 @@ namespace CarLotSimulator
 
         //This construct of "Property" is required in order to
         //default AND custom Constructor
-        public int Year           { get; set; }  //property
+        public int    Year        { get; set; }  //property
         public string Make        { get; set; }  //property
         public string Model       { get; set; }  //property
         public string EngineNoise { get; set; }  //property

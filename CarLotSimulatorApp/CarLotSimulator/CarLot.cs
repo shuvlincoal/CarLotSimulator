@@ -22,6 +22,8 @@ namespace CarLotSimulator
 
         }
 
+
+
         //Propertys go here
         public List<string> CarInventory { get; set; }  //property
         //public string Address { get; set; }
@@ -34,6 +36,7 @@ namespace CarLotSimulator
             CarLot.Cars.Add(make);
             Console.WriteLine($"{make} Added to inventory");
         }
+
 
         public static void DisplayCars()
         {

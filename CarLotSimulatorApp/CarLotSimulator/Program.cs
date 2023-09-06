@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CarLotSimulator
 {
@@ -13,7 +14,7 @@ namespace CarLotSimulator
             //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
             //The methods should take one string parameter: the respective noise property
 
-
+            string tmpStr = "";
             //Now that the Car class is created we can instanciate 3 new cars
             //Set the properties for each of the cars
             //Call each of the methods for each car
@@ -38,11 +39,19 @@ namespace CarLotSimulator
 
             //instantiate, create a "Car" object
             //Custom Constructor to **SET** the object propertys
-            Car car3 = new Car(2023, "Nissan", "Rogue", "Vroom Vroom", "Beep", "yes"); //order DOES matter
+
+            //Experimental
+            //Car car3 = new Car(2023, "Nissan", "Rogue", "Vroom Vroom", "Beep", "yes"); //order DOES matter
+
+            //Dictionary<string, List<string>> CarDict = new Dictionary<string, List<string>>();
+            //List<string> Car1List = new List<string>("Nissan",);
+            //END Experiment
 
 
-
-
+            Console.WriteLine("View Car");
+            Console.Write($"Car1: {car1.Year}, {car1.Make}, {car1.Model}");
+            tmpStr = Console.ReadLine();
+            Console.WriteLine("--------------\n\n");
 
             //*************BONUS X 2*************//
 
@@ -53,10 +62,13 @@ namespace CarLotSimulator
 
             //Display Cars
             CarLot.DisplayCars();
+            Console.WriteLine("Press Return To Concontinue> ");
+            tmpStr = Console.ReadLine();
+            Console.WriteLine("--------------\n\n");
 
             //Add a car to inventory
             Console.WriteLine("Type the Make of the Car");
-            string tmpStr = Console.ReadLine();
+            tmpStr = Console.ReadLine();
             CarLot.AddCar(tmpStr);
             
             //Display cars again
