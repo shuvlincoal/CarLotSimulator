@@ -21,8 +21,8 @@ namespace CarLotSimulator
 
             //instantiate, create a "Car" object
             Car car1 = new Car();
-
-            //use dot notation to **SET** the object propertys
+            //Uses the DEFAULT CONSTRUCTOR
+            //use dot notation to **SET** the object propertys <---<<<
             car1.Year        = 2023;
             car1.Make        = "Nissan";
             car1.Model       = "Rogue";
@@ -35,10 +35,11 @@ namespace CarLotSimulator
 
             //instantiate, create a "Car" object <---<<<
             //Object initializer syntax to **SET** the object propertys
+            //Uses the DEFAULT CONSTRUCTOR
             Car car2 = new Car() { Year = 2023, Make = "Nissan", Model = "Rogue", EngineNoise = "Vroom Vroom", HonkNoise = "Beep", IsDriveable = "Y" }; //order does not matter
 
             //instantiate, create a "Car" object <---<<<
-            //Custom Constructor to **SET** the object propertys
+            //Uses Custom Constructor to **SET** the object propertys
             Car car3 = new Car(2023, "Nissan", "Rogue", "Vroom Vroom", "Beep", "Y" ); //order does not matter
 
 
