@@ -21,8 +21,23 @@ namespace CarLotSimulator
         //public string isDriveable;
         public int price = 1200;
 
-        
 
+        //"static" vs non "static"
+        //"static" MUST use classname.method
+        //A static class is basically the same as a non-static
+        //class, but there is one difference: a static class
+        //cannot be instantiated. In other words, you cannot
+        //use the new operator to create a variable of the class
+        //type. Because there is no instance variable, you
+        //access the members of a static class by using the
+        //class name itself. 
+
+        //A static class can be used as a convenient container
+        //for sets of methods that just operate on input parameters
+        //and do not have to get or set any internal instance fields
+
+        //non static allows us to use instance.method
+        //Car car1 = new Car();
         public Car()   //explicity defined default constructor
         {
         }
