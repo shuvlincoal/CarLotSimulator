@@ -10,6 +10,9 @@ namespace CarLotSimulator
     internal class CarLot
     {
         //Fields go here
+        public static int numberOfCars = 0;
+        
+            
         public static List<string> Cars = new List<string>() { "Mazeratti", "Ferrari", "Pinto", "SR71", "DeLorean" };
 
         //Constructors go here
@@ -34,7 +37,12 @@ namespace CarLotSimulator
         {
 
             CarLot.Cars.Add(make);
+            CarLot.numberOfCars++;
+
             Console.WriteLine($"{make} Added to inventory");
+            Console.WriteLine($"There are {numberOfCars} in inventory");
+            Console.WriteLine("Press Return to Continue> ");
+            Console.ReadLine();
         }
 
 

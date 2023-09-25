@@ -22,7 +22,7 @@ namespace CarLotSimulator
             //The methods should take one string parameter: the respective noise property
 
             string tmpStr = "";
-            //Now that the Car class is created we can instanciate 3 new cars
+            //Now that the Car class is created we can instantiate 3 new cars
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
@@ -50,12 +50,14 @@ namespace CarLotSimulator
             //Uses Custom Constructor to **SET** the object propertys
             Car car3 = new Car(1955, "Chevrolet", "Covette", "Vroom Vroom", "Beep", "Y" ); //order does not matter
 
-
-
+            Car.MakeEngineNoise("Vroom! Vroom!");
+            Car.MakeHonkNoise("Beep! Beeeeeeeeeeeeeep!");
 
             Console.WriteLine("View Car");
             Console.Write($"Car1: {car1.Year}, {car1.Make}, {car1.Model}");
             tmpStr = Console.ReadLine();
+            
+
             Console.WriteLine("--------------\n\n");
 
             //*************BONUS X 2*************//
@@ -82,9 +84,15 @@ namespace CarLotSimulator
             Console.WriteLine("--------------\n\n");
 
             //Add a car to inventory
-            Console.WriteLine("Type the Make of the Car");
-            tmpStr = Console.ReadLine();
-            CarLot.AddCar(tmpStr);
+            while (tmpStr != "xxx")
+            {
+                Console.WriteLine("Adding another car to inventory...");
+                Console.WriteLine("Type the Make of the Car");
+                tmpStr = Console.ReadLine();
+                CarLot.AddCar(tmpStr);
+                Console.WriteLine("Press Return to Add another car or xxx to exit> ");
+                tmpStr = Console.ReadLine();
+            }
             
             //Display cars again
             CarLot.DisplayCars();

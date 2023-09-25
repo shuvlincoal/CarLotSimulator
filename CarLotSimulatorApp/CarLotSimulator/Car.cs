@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CarLotSimulator
 {
-    internal class Car
+    public class Car
     {   //Fields are created directly inside the class
         //Fields are accessible from anywhere in our outside the class (if public)
         //If a field is changed from anywhere - its changed everywhere its used
@@ -70,13 +70,13 @@ namespace CarLotSimulator
 
         public static void MakeEngineNoise(string noise)
         {
-
+            Console.WriteLine($"{noise}");
 
         }
 
-        public static void MakeHonkNoise(string honK)
+        public static void MakeHonkNoise(string honk)
         {
-
+            Console.WriteLine($"{honk}");
 
         }
 
